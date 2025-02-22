@@ -83,7 +83,7 @@ function startProgress() {
   resetProgress();
   $('#progressModal').modal('show');
   progress = 0;
-  let duration = 5000;
+  let duration = 2000;
   let intervalDuration = duration / barCount;
 
   let bars = document.querySelectorAll(".bar");
