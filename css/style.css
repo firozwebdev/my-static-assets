@@ -1,0 +1,396 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f6f8fc, #e3e7ed);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Modal Styles */
+  /* Additional styling for the modal */
+  .modal-content {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    background-color: #f8f9fa; /* Light background */
+    color: #333; /* Dark text for better contrast */
+  }
+  
+  .modal-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .modal-footer {
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .modal-body {
+    font-size: 1.1rem;
+    color: white ;
+  }
+  
+  .btn-close {
+    border: none;
+    background: none;
+  }
+  
+  .btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
+  
+  #background-decor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(175, 42, 182, 0.1);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .circle.large {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 5%;
+  }
+  
+  .circle.medium {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 70%;
+  }
+  
+  .circle.small {
+    width: 100px;
+    height: 100px;
+    top: 80%;
+    left: 20%;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* General styling for the form details */
+  #columnDetail, #relationshipDetail {
+    display: none; /* Hide both initially */
+  }
+  
+  #columnDetail.active, #relationshipDetail.active {
+    display: block; /* Show the active form */
+  }
+  
+  /* Optional: Spacing or styling */
+  
+  
+  .form-detail {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  /* Sidebar Styles */
+  .sidebar {
+    background: #222b36;
+    color: #ffffff;
+    padding: 20px;
+    min-height: 100vh; /* Ensure the sidebar takes at least the full viewport height */
+    border-radius: 10px;
+    height: auto; /* Let the height adjust based on content */
+  }
+  
+  
+  .sidebar-logo img {
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .sidebar h3 {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .sidebar p {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .sidebar h5 {
+    margin-top: 20px;
+    font-weight: 500;
+  }
+  
+  #tableName {
+    border-radius: 8px;
+    padding: 10px;
+  }
+  /* Initially hide both detail forms */
+  #columnDetail, #relationshipDetail {
+    display: none;
+  }
+  
+  
+  #columnsList,
+  #relationshipsList {
+    background: #2f3e4d;
+    padding: 10px;
+    border-radius: 8px;
+    max-height: 250px;
+    overflow-y: auto;
+  }
+  
+  #columnsList li,
+  #relationshipsList li {
+    background: #1e2a37;
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 8px 12px;
+  }
+  
+  .btn-primary {
+    background: #007bff;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+  
+  /* Detail Panel */
+  .detail-panel {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .detail-panel h4 {
+    color: #007bff;
+    font-weight: 600;
+  }
+  
+  .form-control {
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .form-select {
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .remove-btn {
+    background: #dc3545;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .remove-btn:hover {
+    background: #a71d2a;
+  }
+  
+  /* Generate Button */
+  #generateBtn {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    color: #fff;
+    background: linear-gradient(45deg, #520a0a, #ff5733); /* Red gradient */
+    border: none;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+  }
+  
+  #generateBtn:hover {
+    background: linear-gradient(45deg, rgb(107, 7, 7), #ff3d00); /* Darker red on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(183, 28, 28, 0.4);
+  }
+  
+  #generateBtn:active {
+    background: linear-gradient(45deg, #9a0007, #d84315); /* Deeper red when clicked */
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(154, 0, 7, 0.5);
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      height: auto;
+      padding-bottom: 20px;
+    }
+    .detail-panel {
+      margin-top: 20px;
+    }
+  }
+  /* Sidebar Column List Styling */
+  #columnsList,
+  #relationshipsList {
+    padding-left: 10px;
+  }
+  
+  #columnsList li,
+  #relationshipsList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  #columnsList .remove-btn-column,
+  #relationshipsList .remove-btn-relationship {
+    font-size: 1.5rem;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  #columnsList .remove-btn-column:hover,
+  #relationshipsList .remove-btn-relationship:hover {
+    color: red;
+  }
+  
+  #columnsList .remove-btn-column i,
+  #relationshipsList .remove-btn-relationship i {
+    font-size: 1.2rem;
+  }
+  
+  /* Style for the active column */
+  
+  #columnsList .list-group-item-column,
+  #relationshipsList .list-group-item-relationship {
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect for items */
+  #columnsList .list-group-item-column:hover,
+  #relationshipsList .list-group-item-relationship:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Active item style */
+  /* For Columns */
+  
+  
+  
+  /* Hide remove buttons by default */
+  #columnsList .list-group-item-column button.remove-btn-column,
+  #relationshipsList .list-group-item-relationship button.remove-btn-relationship {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  /* Show remove button on hover */
+  #columnsList .list-group-item-column:hover button.remove-btn-column,
+  #relationshipsList .list-group-item-relationship:hover button.remove-btn-relationship {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  #columnsList li.list-group-item-column.active {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  /* For Relationships */
+  #relationshipsList > li.list-group-item-relationship.active {
+    background-color: #0056b3 !important;
+    color: white !important;
+  }
+  
+
+    /* Marquee Section Container */
+.marquee-section {
+  position: relative;
+  width: 100%;
+  top:0px;
+  bottom:0px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px 0;
+  overflow: hidden; 
+  }
+  
+  
+  
+  
+  
+  /* Marquee Content */
+  .marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  color:white;
+  animation: marquee-animation 10s linear infinite;
+  }
+  marquee {
+    color:white;
+  }
+  /* Marquee Text Styling */
+  .marquee-content span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff5722; /* Orange color for the text */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  }
+  
+  /* Animation for Scrolling Effect */
+  @keyframes marquee-animation {
+  0% {
+  transform: translateX(100%); /* Start from right outside of the container */
+  }
+  100% {
+  transform: translateX(-100%); /* End to the left outside of the container */
+  }
+  } 
+  
+  
+  

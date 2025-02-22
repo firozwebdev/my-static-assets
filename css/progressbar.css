@@ -1,0 +1,127 @@
+
+/* Style the modal */
+.modal-content {
+    background: linear-gradient(145deg, #28313b, #485461);
+    color: white;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+   }
+   
+   .modal-header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white !important;
+    border-radius: 15px 15px 0 0;
+    border: none;
+   }
+   
+   .modal-title {
+    font-weight: bold;
+    font-size: 24px;
+   }
+   
+   .modal-footer {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-radius: 0 0 15px 15px;
+    border: none;
+   }
+   
+   .equalizer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 200px;
+    width: 400px;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.05);
+    position: relative;
+   }
+   
+   .bar {
+    width: 25px;
+    height: 10%;
+    border-radius: 10px;
+    transition: height 0.6s ease-in-out;
+    position: relative;
+   }
+   
+   .bar i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+   }
+   
+   #progress-text {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #f5f5f5;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+   }
+   
+   @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+   }
+   
+   .step-label {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #dcdcdc;
+   }
+   
+   .download-btn {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 15px;
+    display: none;
+    box-shadow: 0px 4px 10px rgba(40, 167, 69, 0.3);
+   }
+   
+   .download-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+   }
+   
+   .btn-primary {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    font-size: 16px;
+   }
+   
+   .btn-primary:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+   }
+   #progressModal .modal-dialog {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: 0;
+   width: 50%; /* Adjust width if needed */
+   }
+   
+   

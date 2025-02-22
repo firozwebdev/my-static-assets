@@ -1,0 +1,144 @@
+/* Global Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2e;
+    color: #f8f8f2;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* header {
+    background: linear-gradient(90deg, #af2ab6, #f26d5b);
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+} */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(90deg, #f26d5b, #af2ab6);
+    color: #ecf0f1; /* Light text */
+   
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .download-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #1516194f; /* Primary color */
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .download-button:hover {
+    background-color: #f26d5b; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  .download-button:active {
+    transform: scale(0.98); /* Pressed effect */
+  }
+  
+
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+#laravel-folder-tree {
+    width: 27%;
+    background: #2e3440;
+    padding: 10px;
+    border-right: 1px solid #3b4252;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.editor-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #24283b;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.CodeMirror {
+    flex: 1;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling the anchor and icon for jstree */
+#laravel-folder-tree li.jstree-node > a.jstree-anchor {
+    color: #f8f8f2 !important;  /* Default text color */
+    transition: color 0.3s ease; /* Smooth transition for text */
+    
+}
+
+#laravel-folder-tree li.jstree-node > a.jstree-anchor::before {
+    font-size: 1.2rem;
+    color: #E6616A; /* Default icon color */
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: color 0.3s ease; /* Smooth transition for icon */
+}
+
+/* Hover effects for icon */
+#laravel-folder-tree li.jstree-node:hover > a.jstree-anchor::before {
+    color: #f39c12;  /* Icon color changes on hover */
+}
+
+/* For open folders, set icon color */
+/* #laravel-folder-tree li.jstree-open > a.jstree-anchor::before {
+    color: #f39c12;
+}
+
+#laravel-folder-tree li.jstree-node > a.jstree-clicked::before {
+    color: #f39c12; 
+} */
+
+/* Folder icon */
+.fa-folder::before {
+    content: '📂';
+    color: #f39c12;  /* Folder icon color */
+}
+
+/* Hover effect for the entire row (wholerow) */
+.jstree-wholerow:hover {
+    background-color: #E6616A !important; /* Background color for the whole row */
+  
+}
+
+/* Active clicked state */
+.jstree-wholerow-clicked {
+    background: #D9547C !important; /* Background color for the clicked row */
+}
+
+/* Ensure hover effect is handled correctly */
+.jstree-hovered {
+    background-color: #E6616A !important; /* Highlight hovered row */
+}
