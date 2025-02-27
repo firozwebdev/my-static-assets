@@ -157,13 +157,19 @@ $(document).ready(function () {
                     
                     window.location.href = '/list';
                 } else {
-                    if (response.status === 429) {
-                        // Handle "Too Many Requests" error separately
-                        throw new Error('Server is busy, please try again later.');
+                    if ([429, 419, 403, 500].includes(response.status)) {
+                        let errorMessages = {
+                            429: "Server is busy, please try again later!",
+                            419: "Page Expired: Please refresh and try again!",
+                            403: "Forbidden: You do not have permission!",
+                            500: "Server Error: Something went wrong on our end!"
+                        };
+                    
+                        throw new Error(errorMessages[response.status]);
                     } else {
-                        // Handle other errors
-                        throw new Error(data.error || data.message || 'Unknown error occurred.');
+                        throw new Error(data.error || data.message || "Unknown error occurred.");
                     }
+                    
                 }
             } catch (error) {
                 // Handle parsing errors or server error response
