@@ -157,8 +157,13 @@ $(document).ready(function () {
                     
                     window.location.href = '/list';
                 } else {
-                    // Handle error response from server
-                    throw new Error(data.error || 'Unknown error occurred.');
+                    if (response.status === 429) {
+                        // Handle "Too Many Requests" error separately
+                        throw new Error('Server is busy, please try again later.');
+                    } else {
+                        // Handle other errors
+                        throw new Error(data.error || data.message || 'Unknown error occurred.');
+                    }
                 }
             } catch (error) {
                 // Handle parsing errors or server error response
