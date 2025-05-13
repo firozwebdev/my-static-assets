@@ -41,7 +41,7 @@ $(document).ready(function () {
     //if(!isValidTableName($("#tableName").val().trim())) return;
       tableName = $("#tableName").val().trim(); // Get the table name
       if (!tableName) {
-          showCustomAlert("Please set the Model name first in the sidebar.");
+          showCustomAlert("Please set the Model name first in the sidebar! (e.g. User, Product, Post, etc.)");
           disableActions();
           return false;
       }
@@ -271,7 +271,7 @@ $(document).ready(function () {
      // Add a new column when the "Add Column" button is clicked
       $("#addColumnBtn").click(function (e) {
           if (!checkTableName()) {
-              showCustomAlert("Please set the Model name first!");
+              showCustomAlert("Please set the Model name first in the sidebar! (e.g. User, Product, Post, etc.)");
               return; 
           }
           $('#detailPanel').show();
