@@ -338,7 +338,7 @@ $(document).ready(function () {
         if (!isValidTableName(tableName)) return;
     
         if (!tableName) {
-            showCustomAlert("Please set the Model name first in the sidebar!");
+            showCustomAlert("Please set the Model name first in the sidebar! (e.g. User, Product, Post, etc.)");
             return;
         }
     
