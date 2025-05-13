@@ -26,7 +26,7 @@ $(document).ready(function () {
       let columnCount = $("#columnsList li").length; // Count existing columns
   
       if (!tableName) {
-        showCustomAlert("Please set the Model name first in the sidebar!");
+        showCustomAlert("Please set the Model name first in the sidebar! (e.g. User, Product, Post, etc.)");
         disableActionsForRelationships();
         return false;
       }
@@ -56,7 +56,7 @@ $(document).ready(function () {
       //if(!isValidTableName($("#tableName").val().trim())) return;
       tableName =  $("#tableName").val().trim();
       if (!tableName) {
-          showCustomAlert("Please set the Model name first in the sidebar!");
+          showCustomAlert("Please set the Model name first in the sidebar! (e.g. User, Product, Post, etc.)");
           return;
       }
   
@@ -146,7 +146,7 @@ $(document).ready(function () {
       //if(!isValidTableName($("#tableName").val().trim())) return;
       tableName =  $("#tableName").val().trim();
       if (!tableName) {
-          showCustomAlert("Please set the Model name first in the sidebar!");
+          showCustomAlert("Please set the Model name first in the sidebar! (e.g. User, Product, Post, etc.)");
           return;
       }
   
